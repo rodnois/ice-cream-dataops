@@ -1,0 +1,37 @@
+environment: 
+  name: test
+  project: cdf-bootcamp-43-test
+  type: test
+  selected:
+  - modules/bootcamp/data_foundation
+  - modules/bootcamp/ice_cream_api
+  - modules/bootcamp/use_cases/oee
+variables:
+  modules:
+    bootcamp:
+      CDF_PROJECT: cdf-bootcamp-43-test # ex. cdf-bootcamp-01-test
+      IDP_CLIENT_ID: ${IDP_CLIENT_ID} # replaced by .env
+      IDP_CLIENT_SECRET: ${IDP_CLIENT_SECRET} # replaced by .env
+      IDP_TENANT_ID: ${IDP_TENANT_ID} # replaced by .env
+      CDF_URL: https://westeurope-1.cognitedata.com # This is related to the cluster where the CDF project is hosted.
+      IDP_SCOPES: https://westeurope-1.cognitedata.com/.default
+      IDP_TOKEN_URL: ${IDP_TOKEN_URL} # replaced by .env
+
+      # Groups
+      data_developer_source_id: 74f8eb1a-1f64-4d13-9502-f9d1ec85e082 # ex. xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
+      data_pipeline_oee_source_id: bceb9ae4-1c9b-4eea-b849-ab543becab1c # ex. xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
+      readwrite_source_id: 24528a67-260e-440b-9850-6a618d573a9  # ex. xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
+      readonly_source_id: 24528a67-260e-440b-9850-6a618d573a9  # ex. xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
+      icapi_extractors_source_id: 418d50fb-120a-4d9e-82d3-381088e88e6b # ex. xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+      # Client Ids
+      data_pipeline_oee_client_id: ${DATA_PIPELINE_OEE_CLIENT_ID} # replaced by .env
+      data_pipeline_oee_client_secret: ${DATA_PIPELINE_OEE_CLIENT_SECRET} # replaced by .env
+      icapi_extractors_client_id: ${ICAPI_EXTRACTORS_CLIENT_ID} # replaced by .env
+      icapi_extractors_client_secret: ${ICAPI_EXTRACTORS_CLIENT_SECRET} # replaced by .env
+
+      # Variables shared by modules
+      icapi_ds_external_id: ds_icapi
+      use_cases:
+        oee:
+          uc_oee_ds_external_id: ds_uc_oee
